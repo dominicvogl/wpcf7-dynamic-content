@@ -1,13 +1,26 @@
 <?php
-/*
-Plugin Name: Contact Form 7 - Dynamic Content from ACF
-Description: Extend Contact Form 7 with dynamic content from different ACF sources
-Author: Dominic Vogl
-Author URI: https://github.com/dominicvogl/
-Text Domain: contact-form-7-dc
-Domain Path: /languages/
-Version: 0.0.2
-*/
+/**
+ * Contact Form 7 - Dynamic Content from ACF
+ *
+ * @package           ContactForm7DynamicContentFromACF
+ * @author            Dominic Vogl
+ * @copyright         2022 Dominic Vogl, Catalyst-Interactive
+ * @license           GPL-2.0-or-later
+ *
+ * @wordpress-plugin
+ * Plugin Name:       Contact Form 7 - Dynamic Content from ACF
+ * Plugin URI:        https://github.com/dominicvogl/wpcf7-dynamic-content
+ * Description:       Loads Data from ACF fields and add them to post data, with not available fields
+ * Version:           0.0.2
+ * Requires at least: 5.7
+ * Requires PHP:      7.4
+ * Author:            Dominic Vogl
+ * Author URI:        https://github.com/dominicvogl/
+ * Text Domain:       wpcf7-dc
+ * License:           GPL v2 or later
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * Update URI:        https://github.com/dominicvogl/wpcf7-dynamic-content
+ */
 
 
 // if this file is called directly, DIE!
@@ -26,6 +39,7 @@ class Cf7_Add_Dynamic_Value {
 
 	//main constructor
 	public function __construct() {
+
 		add_filter( 'wpcf7_posted_data', array( $this, 'add_dynamic_data' ) );
 		add_filter( 'wpcf7_mail_tag_replaced', array( $this, 'format_line_breaks' ), 10, 4 );
 	}
@@ -94,7 +108,6 @@ class Cf7_Add_Dynamic_Value {
 
 		return $replaced;
 	}
-
 
 }
 
