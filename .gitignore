@@ -1,0 +1,33 @@
+# general folders
+node_modules/
+
+# editors
+.idea/
+.vscode/
+
+# files to ignore by OS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+
+# ordinary files
+package-lock.json
+.htaccess
+*.log
+*.psd
+*.pdf
+*.xd
+*.indd
+*.ai
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.exe
+*.msg
